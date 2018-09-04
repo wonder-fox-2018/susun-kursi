@@ -12,29 +12,29 @@
 
 function generateSeats(row) {
 	let seats = []
-	for(let i=0; i<rowa; i++) {
-		seat.push([])
+	for(let i=0; i<row; i++) { // hapus a dari rowa
+		seats.push([]) // tambah s ke seat
 	}
 	return seats
 }
 
 function managePerson(arr, rowSeats) {
-	let seats = generateSeat(rowSeats)
+	let seats = generateSeats(rowSeats) // tambah s ke generateSeat
 	let row = 0
 
-	for(let i=0; i<arr.length-1; i++) {
-		seat[row].push(arr[i])
-		if(row <= 2) {
+	for(let i=0; i<arr.length; i++) { //hapus -1 dari arr.length -1
+		seats[row].push(arr[i])  //tambah s ke seat
+		if(row < rowSeats -1) { // ganti row <= 2 jadi row < rowSeats -1
 			row++
 		} else {
-			row == 0
+			row = 0 //hapus = dari ==
 		}
 	}
 	printSeats(seats)
 }
 
 function printSeats(seats) {
-	for(let i=1; i<seats.length; i++) {
+	for(let i=0; i<seats.length; i++) { // ganti 1 menjadi 0 di i=1
 		console.log(`Baris ${i} : `, seats[i])
 	}
 }
