@@ -32,12 +32,11 @@ function managePerson(arr, rowSeats) {
 			row ++
 		}
 	}
-	console.log(seats)
 	printSeats(seats)
 }
 
 function printSeats(seats) {
-	for(let i=1; i<seats.length; i++) {
+	for(let i=0; i<seats.length; i++) {
 		console.log(`Baris ${i} : `, seats[i])
 	}
 }
