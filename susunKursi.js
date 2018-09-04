@@ -10,33 +10,39 @@
 
 'use strict'
 
-function generateSeats(row) {
+function generateSeats(rowSeats) {
 	let seats = []
-	for(let i=0; i<rowa; i++) {
-		seat.push([])
+	for(let i=0; i<rowSeats; i++) {
+		seats.push([])
 	}
 	return seats
 }
-
+// console.log(generateSeats(3))
 function managePerson(arr, rowSeats) {
-	let seats = generateSeat(rowSeats)
+	let seats = generateSeats(rowSeats)
+	// console.log(seats)
 	let row = 0
 
-	for(let i=0; i<arr.length-1; i++) {
-		seat[row].push(arr[i])
-		if(row <= 2) {
+	for(let i = 0; i < arr.length; i++) {
+		seats[row].push(arr[i])
+		// console.log(i)
+		debugger
+		if(row < 2) {
 			row++
 		} else {
-			row == 0
+			row = 0
 		}
+		debugger
 	}
 	printSeats(seats)
+	debugger
 }
 
 function printSeats(seats) {
-	for(let i=1; i<seats.length; i++) {
+	for(let i=0; i < seats.length; i++) {
 		console.log(`Baris ${i} : `, seats[i])
 	}
 }
+// printSeats(['a','b','c','d','e','f','g','h','i','j'])
 
-managePerson(['a','b','c','d','e','f','g','h','i','j'], 3)
+console.log(managePerson(['a','b','c','d','e','f','g','h','i','j'], 3))
